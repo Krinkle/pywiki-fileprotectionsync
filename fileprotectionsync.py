@@ -7,10 +7,16 @@
 # @author Betacommand
 # @author Krinkle
 # @license CC-BY-SA 3.0
-from __future__ import print_function
+from __future__ import absolute_import, print_function
 import sys
 import json
-import urllib
+try:
+    from urllib.parse import urlencode
+    from urllib.request import urlopen
+except ImportError:
+    # python2.7
+    from urllib import urlencode
+    from urllib2 import urlopen
 
 import fileprotectionsync_config as config
 import pywikibot
@@ -32,15 +38,15 @@ def main():
 
 def get_images(site, title):
     # TODO: Use pywikibot's built-in API stuff instead of this
-    title = urllib.urlencode({'titles': title})
+    title = urlencode({'titles': title})
     mpimages = []
     path = 'https://%s/w/api.php?action=query&prop=images&%s&imlimit=500&redirects&format=json' % (site, title)
     print(path)
-    tx = urllib.urlopen(path)
-    json_resp = tx.read()
+    tx = urlopen(path)
+    json_resp = tx.read().decode('utf-8')
     data = json.loads(json_resp)
     try:
-        images = data['query']['pages'][data['query']['pages'].keys()[0]]['images']
+        images = data['query']['pages'][list(data['query']['pages'].keys())[0]]['images']
     except KeyError:
         print('Error: Page "%s" not found on %s' % (title, site), file=sys.stderr)
         return mpimages
