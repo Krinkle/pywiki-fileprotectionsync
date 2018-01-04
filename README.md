@@ -39,7 +39,7 @@ Install pywikibot:
 
 ```bash
 # (tooluser in ~/)
-$ virtualenv pywiki
+$ virtualenv pywiki -p python3
 $ source ~/pywiki/bin/activate
 $ cd ~/src/pywikibot-core
 $ python setup.py develop
