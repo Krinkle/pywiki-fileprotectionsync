@@ -1,2 +1,3 @@
 *.pyc
-fileprotectionsync_config.py
+/.tox
+/fileprotectionsync_config.py
