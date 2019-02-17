@@ -39,8 +39,8 @@ Install pywikibot:
 
 ```bash
 # (tooluser in ~/)
-$ virtualenv pywiki -p python3
-$ source ~/pywiki/bin/activate
+$ virtualenv pywikienv -p python3
+$ source ~/pywikienv/bin/activate
 $ cd ~/src/pywikibot-core
 $ python setup.py develop
 ```
@@ -53,11 +53,11 @@ $ ln -sf fileprotectionsync_config-prod.py fileprotectionsync_config.py
 
 # (you in ~/)
 $ edit crontab.txt
-0,15,30,45 * * * * /usr/bin/jsub -once -quiet -l release=trusty -mem 500m -N fileprotectionsync $HOME/pywiki/bin/python $HOME/src/pywiki-fileprotectionsync/fileprotectionsync.py
+0,15,30,45 * * * * /usr/bin/jsub -once -quiet -l release=trusty -mem 500m -N fileprotectionsync $HOME/pywikienv/bin/python $HOME/src/pywiki-fileprotectionsync/fileprotectionsync.py
 ```
 
 To run it manually:
 
 ```bash
-$ $HOME/pywiki/bin/python $HOME/src/pywiki-fileprotectionsync/fileprotectionsync.py
+$ $HOME/pywikienv/bin/python $HOME/src/pywiki-fileprotectionsync/fileprotectionsync.py
 ```
