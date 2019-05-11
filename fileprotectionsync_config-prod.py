@@ -37,7 +37,7 @@ wikis = [
     },
     {
         'sourcewiki': 'zh.wikipedia.org',
-        'sourcepages': ['Wikipedia:首页', 'Wikipedia:首页/明天'],
+        'sourcepages': ['Wikipedia:首页', 'Wikipedia:首页/明天', 'Wikipedia:首页/全部'],
         'targetpage': 'Commons:Auto-protected files/wikipedia/zh',
     },
     {
