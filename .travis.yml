@@ -1,3 +1,6 @@
+# Upgrade from Trusty to Xenial because, on Travis CI, Py 3.7+ is Xenial-only.
+# https://docs.travis-ci.com/user/languages/python/#python-37-and-higher
+dist: xenial
 language: python
 python:
   - "3.7"
