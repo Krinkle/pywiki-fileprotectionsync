@@ -1,7 +1,7 @@
 # -*- coding: utf-8  -*-
 # Production configuration file for fileprotectionsync.py
 
-editsummary = 'Update [[Commons:Auto-protected files|auto-protection]] (r26)'
+editsummary = 'Update [[Commons:Auto-protected files|auto-protection]]'
 wikitext_start = '{{Auto-protected files gallery}}<gallery widths="80" heights="80">\n'
 wikitext_end = '</gallery>'
 wikis = [
