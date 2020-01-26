@@ -12,7 +12,7 @@ wikis = [
     },
     {
         'sourcewiki': 'en.wikipedia.org',
-        'sourcepages': ['Main Page', 'Wikipedia:Main Page/Tomorrow'],
+        'sourcepages': ['Main Page', 'Wikipedia:Main Page/Tomorrow', 'Wikipedia:Picture of the day/On the main pages'],
         'targetpage': 'Commons:Auto-protected files/wikipedia/en',
     },
     {
